@@ -149,13 +149,13 @@ class FritzSession(
      * @return The new state of the switch.
      * @since 0.2.0
      */
-    fun setSwitchToggle(ain: String): SwitchState = SwitchState.parse(request("setswitchtoggle", ain))
+    fun setSwitchToggle(ain: String): SwitchState = SwitchState.parse(request("setswitchtoggle", ain).trim())
 
     /**
      * @return The current state of the switch specified by [ain].
      * @since 0.2.0
      */
-    fun getSwitchState(ain: String): SwitchState = SwitchState.parse(request("getswitchstate", ain))
+    fun getSwitchState(ain: String): SwitchState = SwitchState.parse(request("getswitchstate", ain).trim())
 
     /**
      * @return true if the switch specified by [ain] is connected, false otherwise.
